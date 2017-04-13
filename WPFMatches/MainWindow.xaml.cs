@@ -25,7 +25,8 @@ namespace WPFMatches
         {
             InitializeComponent();
             // initialisieren
-            startgame();
+            //startgame();
+            
 
 
 
@@ -33,20 +34,31 @@ namespace WPFMatches
         private void startgame()
         {
             this.wrappi = new WrapPanel();
-            Button button = new Button();
-            button.Content = "1";
-            button.HorizontalAlignment = HorizontalAlignment;
-            button.VerticalAlignment = VerticalAlignment;
+            Button button2 = new Button();
+            button2.Content = "2 Spieler";
+
+            Button button3 = new Button();
+            button3.Content = "3 Spieler";
+
+            Button button4 = new Button();
+            button4.Content = "4 Spieler";
+
+            Button button5 = new Button();
+            button5.Content = "5 Spieler";
+
             TextBlock textBlock = new TextBlock();
             textBlock.Text = "Bitte geben Sie Ihre Anzahl an Spielern an";
-            this.wrappi.Children.Add(button);
+            this.wrappi.Children.Add(button2);
+            this.wrappi.Children.Add(button3);
+            this.wrappi.Children.Add(button4);
+            this.wrappi.Children.Add(button5);
             this.wrappi.Children.Add(textBlock);
             grid1.Children.Add(this.wrappi);
         }
 
         private void player2_Click(object sender, RoutedEventArgs e)
         {
-            Game();
+           
         }
 
         private void player3_Click(object sender, RoutedEventArgs e)
