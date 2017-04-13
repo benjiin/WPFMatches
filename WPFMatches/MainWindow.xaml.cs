@@ -25,11 +25,11 @@ namespace WPFMatches
         {
             InitializeComponent();
             // initialisieren
-            
+
             this.wrappi = new WrapPanel();
             textBlock.Text = "Bitte geben Sie Ihre Anzahl an Spielern an";
 
-           
+
         }
 
         private void player2_Click(object sender, RoutedEventArgs e)
@@ -63,45 +63,39 @@ namespace WPFMatches
                 nummer = new int[person];
             bool[]
                 isUsedId = new bool[person];
-            bool
-                spiel = true;
 
-
-            while (spiel)
+            for (int j = 0; j < person; j++)
             {
-                for (int j = 0; j < person; j++)
-                {
 
-                    textBlock.Text ="Gezeigt werden die Streichhölzer \"nebeneinanderliegend\" wobei das Streichholz mit der 1 das kurze ist";
-                    nummer[zufall] = 1;
-                    for (int i = 0; i < nummer.Length; i++)
+                textBlock.Text = "Gezeigt werden die Streichhölzer \"nebeneinanderliegend\" wobei das Streichholz mit der 1 das kurze ist";
+                nummer[zufall] = 1;
+                for (int i = 0; i < nummer.Length; i++)
+                {
+                    if (isUsedId[i] == false)
                     {
-                        if (isUsedId[i] == false)
-                        {
-                            textBlock.Text = "Streichholz" + i+1 + ": hat den Wert" + nummer[i];
-                        }
+                        textBlock.Text = "Streichholz" + i + 1 + ": hat den Wert" + nummer[i];
                     }
-                    textBlock.Text = "Spieler " + j + 1 +" Bitte ziehen Sie ein Streichholz. (Nummer zwischen 1-" + person + "eingeben)";
-                    int auswahl = Convert.ToInt32(Console.ReadLine()) - 1; // buttons
-
-                    //isUsedId[auswahl] = true;
-
-                    //if (auswahl == zufall)
-                    //{
-                    //    loser = j + 1;
-                    //}
-                    //runden -= 1;
                 }
-                if (runden == 0)
-                {
-                    spiel = false;
-                }
+                textBlock.Text = "Spieler " + j + 1 + " Bitte ziehen Sie ein Streichholz. (Nummer zwischen 1-" + person + "eingeben)";
+                int auswahl = Convert.ToInt32(Console.ReadLine()) - 1; // buttons
+
+                //isUsedId[auswahl] = true;
+
+                //if (auswahl == zufall)
+                //{
+                //    loser = j + 1;
+                //}
+                //runden -= 1;
+
                 textBlock.Text = "Spieler" + loser + "hat das Spiel verloren";
             }
         }
     }
-
 }
+        
+    
+
+
 /*
  *     public partial class MainWindow : Window
     {
@@ -143,4 +137,4 @@ namespace WPFMatches
     }
 }
 */
- * 
+ 
