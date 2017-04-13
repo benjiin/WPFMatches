@@ -20,7 +20,7 @@ namespace WPFMatches
     /// </summary>
     public partial class MainWindow : Window
     {
-        WrapPanel wrappi;  
+        WrapPanel wrappi;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,8 +35,12 @@ namespace WPFMatches
             this.wrappi = new WrapPanel();
             Button button = new Button();
             button.Content = "1";
+            button.HorizontalAlignment = HorizontalAlignment;
+            button.VerticalAlignment = VerticalAlignment;
+            TextBlock textBlock = new TextBlock();
             textBlock.Text = "Bitte geben Sie Ihre Anzahl an Spielern an";
             this.wrappi.Children.Add(button);
+            this.wrappi.Children.Add(textBlock);
             grid1.Children.Add(this.wrappi);
         }
 
@@ -61,7 +65,7 @@ namespace WPFMatches
         }
         private void Game()
         {
-            textBlock.Text = "";
+            //textBlock.Text = "";
 
         }
     }
