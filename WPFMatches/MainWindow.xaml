@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:WPFMatches"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    <Grid x:Name="grid1">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="149" Margin="109,50,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="295"/>
+        <Button x:Name="player2" Content="2" HorizontalAlignment="Left" Margin="85,214,0,0" VerticalAlignment="Top" Width="75" Click="player2_Click"/>
+        <Button x:Name="player3" Content="3" HorizontalAlignment="Left" Margin="178,214,0,0" VerticalAlignment="Top" Width="75" Click="player3_Click"/>
+        <Button x:Name="player4" Content="4" HorizontalAlignment="Left" Margin="279,214,0,0" VerticalAlignment="Top" Width="75" Click="player4_Click"/>
+        <Button x:Name="player5" Content="5" HorizontalAlignment="Left" Margin="386,214,0,0" VerticalAlignment="Top" Width="75" Click="player5_Click"/>
+
     </Grid>
 </Window>
